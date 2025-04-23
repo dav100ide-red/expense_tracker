@@ -59,9 +59,10 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpeneseOverlay() {
     showModalBottomSheet(
+      useSafeArea: true,
       isScrollControlled: true,
       context: context,
-      builder: (ctx) => NewExpense(onSubmitExpense: _setExpenses),
+      builder: (ctx) => NewExpense(onAddExpense: _setExpenses),
     );
   }
 
